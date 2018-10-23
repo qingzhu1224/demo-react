@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
+import Container from './Container';
+
 
 class App extends Component {
   constructor(){
@@ -13,18 +15,20 @@ class App extends Component {
   }
 
   click = () => {
-      this.setState({
-        data2: this.data2++,
-      })
+      this.setState((props) => {
+        console.log(props, 'click');
+        return { data2: props.data2 + 1}
+      }) 
   }
 
   render() {
+    console.log(this.state, 'state')
     return (
       <div className="App" onClick={() => this.click()}>
           <Header data={this.state.data}/>
           <div>{this.state.data2}</div>
+          <Container />
       </div>
-
     );
   }
 }
