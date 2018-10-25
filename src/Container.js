@@ -6,9 +6,9 @@ class Container extends Component {
     }
     render() {
         return (
-        <div className="App">
-           i am container
-        </div>
+            <div id="App">
+            i am container
+            </div>
         );
     }
 }

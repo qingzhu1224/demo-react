@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
 import Container from './Container';
+import Dialog from './Dialog';
 
 
 class App extends Component {
@@ -21,6 +22,8 @@ class App extends Component {
       }) 
   }
 
+  
+
   render() {
     console.log(this.state, 'state')
     return (
@@ -28,6 +31,7 @@ class App extends Component {
           <Header data={this.state.data}/>
           <div>{this.state.data2}</div>
           <Container />
+          <Dialog />
       </div>
     );
   }
